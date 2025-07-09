@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loading from '../loading/Loading'
+import toast from 'react-hot-toast'
 
 const Services = () => {
   const [serviceContent, setServiceContent] = useState([])
@@ -17,29 +18,31 @@ const Services = () => {
 
         if (!response.ok) {
           const errorData = await response.json().catch(() => null)
-          toast.error(errorData?.message, { position: 'top-center' })
+          toast.error(errorData?.message || 'Something went wrong!', {
+            position: 'top-center',
+            className: 'toast-error',
+          })
           setLoading(false)
           return
         }
 
         const data = await response.json()
         setServiceContent(data?.data || [])
-      } catch (error) {
-        toast.error(error || 'There was an issue retrieving services data. Please check your connection.', {
+      } catch {
+        toast.error('There was an issue retrieving services data. Please check your connection.', {
           className: 'toast-error',
         })
       } finally {
         setLoading(false)
       }
     }
+
     fetchServicesContent()
   }, [])
 
-  console.log('servicesContent', serviceContent)
-
-  // if (loading) {
-  //   return <Loading />
-  // }
+  if (loading) {
+    return <Loading />
+  }
 
   return (
     <section className="space-xl">
@@ -54,7 +57,7 @@ const Services = () => {
           </Link>
         </div>
 
-        <div className="flex flex-wrap gap-y-10 gap-x-10 tab-s:flex-col tab-m:gap-10">
+        <div className="flex flex-wrap gap-20 tab-s:flex-col tab-m:gap-10 laptop-x:gap-16 laptop-l:gap-18 laptop-m:gap-14 laptop-s:gap-12 tab-l:gap-10">
           {serviceContent?.map((service, index) => (
             <div
               key={service.service_list_id || index}
