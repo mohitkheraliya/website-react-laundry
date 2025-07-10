@@ -80,7 +80,7 @@ const Footer = () => {
               <h4 className="sitemap-title">Services</h4>
               <ul className="sitemap-list">
                 <li>
-                  <Link to="services">Laundry Services</Link>
+                  <Link to="/our-services">Laundry Services</Link>
                 </li>
                 <li>
                   <Link to="/terms-condition">Terms & Condition</Link>
