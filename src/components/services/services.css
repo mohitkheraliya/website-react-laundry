@@ -183,14 +183,14 @@
 }
 
 .info-login-container {
-  width: 26rem;
+  width: 30rem;
   background-color: white;
   border-radius: 8px;
   padding: 2.8rem;
 
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
+  gap: 3rem;
 }
 
 /*  ServiceContainer - Cart */

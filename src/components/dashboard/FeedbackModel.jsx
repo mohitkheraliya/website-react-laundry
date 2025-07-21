@@ -73,7 +73,7 @@ const FeedbackModel = ({ order_id, setModelIsOpen, feedback, setRefetch }) => {
         </button>
 
         <div className="text-[2rem] capitalize text-[var(--black)] font-semibold laptop:text-[1.8rem] tab-s:text-[1.6rem]">
-          Order Id #{order_id}
+          Order No: #{order_id}
         </div>
 
         <div>

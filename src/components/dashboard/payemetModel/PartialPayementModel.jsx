@@ -174,7 +174,7 @@ const PartialPayementModel = ({ setModleHandler, setRefetch }) => {
                     <thead className="border-b border-[#b9bccf4d]">
                       <tr>
                         <th className="w-40 min-w-40">check</th>
-                        <th className="min-w-48">order id</th>
+                        <th className="min-w-48">Order No</th>
                         <th className="min-w-[18rem]">booking date</th>
                         <th className="min-w-[15rem]">delivery date</th>
                         <th className="min-w-40">Total</th>

@@ -262,7 +262,7 @@ const QuickOrderSummary = ({ instruction, paymentMethod, selectedAddId, selected
 
                 <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Are You Sure You Want to Place This Order?</h2>
 
-                <p className="text-center text-gray-600 text-lg leading-relaxed mb-8">
+                <p className="text-center text-gray-600 text-[1.4rem] leading-relaxed mb-8">
                   Once placed, this order will be processed for delivery and cannot be undone. Please review your selections before confirming.
                 </p>
 

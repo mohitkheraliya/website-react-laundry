@@ -277,7 +277,7 @@ const Home = () => {
                       className="flex items-center justify-center gap-2 cursor-pointer"
                       onClick={() => handleUpDownClick("order_id")}
                     >
-                      <span>order id</span>
+                      <span>Order No</span>
                       <span className="flex flex-col">
                         <IoCaretUp
                           className={`updown-icon ${
