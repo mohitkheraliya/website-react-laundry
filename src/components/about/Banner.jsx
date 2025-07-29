@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-const Banner = () => {
+const Banner = ({ description1, description2 }) => {
   return (
     <section className="section-space">
       <div className="secondary-container">
@@ -17,26 +17,13 @@ const Banner = () => {
             </Link>
           </div>
           <div className="basis-1/2 space-y-10 laptop-l:space-y-8 laptop-m:space-y-6 laptop-s:space-y-4">
-            <p className="para2">
-              We are professionals in the laundry and dry cleaning business,
-              which means we always stay updated on the latest technologies,
-              cleaning methods, and solutions for dealing with stains or
-              delicate fabrics. Plus, we maintain the highest business integrity
-              standards by following local and national regulations and
-              environmental safety rules. We are passionate about changing the
-              way you think about laundry!
-            </p>
-            <p className="para2">
-              Being the foremost Sikka Cleaners in Memnagar, Ahmedabad , we use
-              our vast experience to inculcate latest and advanced stain removal
-              techniques along with wet and Sikka Cleaners procedures to make
-              your clothes new and fresh.
-            </p>
+            <p className="para2">{description1}</p>
+            <p className="para2">{description2}</p>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

@@ -93,10 +93,10 @@ const History = () => {
                 transform: `translateX(-${currentIndex * cardWidth}px)`,
               }}>
               {historyData?.map((data) => {
-                const { year, description, image } = data
+                const { year, laundry_history_id, description, image } = data
 
                 return (
-                  <div key={year} ref={cardRef} className="flex justify-center items-center min-w-full">
+                  <div key={laundry_history_id} ref={cardRef} className="flex justify-center items-center min-w-full">
                     <div className="bg-[#F7F8FD] mx-12 my-8 laptop-s:mx-8 rounded-3xl py-20 px-28 flex items-center gap-40 relative laptop-l:py-16 laptop-l:px-20 laptop-l:gap-32 laptop-md:py-14 laptop-md:px-16 laptop-md:gap-24 laptop:p-12 laptop:gap-20 laptop:rounded-2xl laptop-s:p-10 laptop-s:rounded-xl tab-m:p-9 tab-m:gap-14 tab-m:basis-[86%] tab-s:gap-12 tab:basis-full tab:p-8 tab:rounded-lg tab:gap-8 mb-l:p-8 mb-l:py-10 mb-l:gap-6 mb-l:flex-wrap mb-l:justify-center carousel-shadow tab:m-6 mb-l:m-4">
                       <span className="year-psudo">{year}</span>
                       <img
@@ -116,10 +116,10 @@ const History = () => {
 
           <div className="flex justify-center items-center flex-wrap gap-16 pt-28 laptop-l:pt-20 laptop-md:pt-16 laptop:gap-12 tab-m:pt-12 tab-m:gap-10 tab-s:pt-10 tab:pt-8 tab:gap-6 mb:pt-4">
             {historyData?.map((data, index) => {
-              const { year } = data
+              const { year, laundry_history_id } = data
               return (
                 <span
-                  key={year}
+                  key={laundry_history_id}
                   className={`timeline-text ${currentIndex === index ? 'active-time' : ''}`}
                   role="button"
                   onClick={() => handleDotClick(index)}>
